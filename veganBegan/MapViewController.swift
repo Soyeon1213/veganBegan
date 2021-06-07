@@ -14,8 +14,6 @@ class MapViewController: UIViewController, MTMapViewDelegate {
     var mapView: MTMapView?
     var mapPoint: MTMapPoint?
     var poiItem1: MTMapPOIItem?
-    // test
-    var DBop: DatabaseManager = DatabaseManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +42,6 @@ class MapViewController: UIViewController, MTMapViewDelegate {
             self.view.addSubview(mapView)
             
             // test
-            DBop.test()
         }
     }
     

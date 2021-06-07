@@ -9,35 +9,66 @@
 import Foundation
 import Firebase
 
+struct Menu {
+    var name: String
+    var type1: String
+    var type2: String
+}
+
+struct Restaurant {
+    var num: Int
+    var name: String
+    var food: String
+    var hp: String
+    var addr: String
+    var detail: String
+    var latitude: Double
+    var longitude: Double
+    var menu: [Menu]
+    var type_max: String
+    var type_min: String
+    var rating: Double
+    var rating_count: Int
+}
+
 class DatabaseManager {
-    var ref: DatabaseReference! = Database.database(url: "https://veganbegan-6322d-default-rtdb.firebaseio.com/").reference()
+    static var ref: DatabaseReference! = Database.database(url: "https://veganbegan-6322d-default-rtdb.firebaseio.com/").reference()
+    let veganTypeRange = ["비건", "락토", "오보", "락토/오보", "락토오보", "페스코", "일반식"]
     
-    func updateRating(id: Int, rating: Int) {
-        var ratingAvg: Double = 0.0
-        var ratingCount: Int = 0
-        self.ref.child("restaurant/\(id)").getData(completion: { (error, snapshot) in
-            if let error = error {
-                print("Error getting data \(error)")
-            }
-            else if snapshot.exists() {
-                let value = snapshot.value as? NSDictionary
-                ratingAvg = value?["rating"] as? Double ?? 0.0
-                ratingCount = value?["rating_count"] as? Int ?? 0
-            }
-            else {
-                print("No data available")
-            }
+    static func sortbyDistance(latitude: Double, longitude: Double) -> [NSDictionary] {
+        var result: [NSDictionary] = []
+        let queryResult = DatabaseManager.ref.child("restaurant").queryOrdered(byChild: "num")
+        queryResult.observeSingleEvent(of: .value, with: {snapshot in
+            result = snapshot.value as! [NSDictionary]
+            result.sort(by: {
+                let x1 = $0["latitude"] as! Double - latitude
+                let x2 = $0["longitude"] as! Double - longitude
+                let y1 = $1["latitude"] as! Double - latitude
+                let y2 = $1["longitude"] as! Double - longitude
+                return x1*x1 + x2*x2 < y1*y1 + y2*y2
+            })
         })
+        return result.dropLast(result.count - 45)
+    }
+    /*
+    static func sortbyFoodCategory(category: String) -> [Restaurant] {
+        var result: [Restaurant] = []
+        let queryResult = DatabaseManager.ref.child("restaurant").queryEqual(toValue: category, childKey: "food")
+    }*/
+        /*
+    static func updateRating(id: Int, rating: Int) {
+        var ratingAvg: Double = restaurantSnapshot["\(id)/rating"] as? Double ?? 0.0
+        var ratingCount: Int = restaurantSnapshot["\(id)/rating_count"] as? Int ?? 0
         ratingCount += 1
         ratingAvg = (ratingAvg * (Double(ratingCount)-1) + Double(rating)) / Double(ratingCount)
-        self.ref.child("restaurant/\(id)/rating").setValue(rating)
-        self.ref.child("restaurant/\(id)/rating_count").setValue(ratingCount)
-    }
-    
+        ref.child("restaurant/\(id)/rating").setValue(rating)
+        ref.child("restaurant/\(id)/rating_count").setValue(ratingCount)
+    }*/
+        
     func test() {
         var testName: String = ""
         var testNum: Int = 0
-        self.ref.child("restaurant/0").getData(completion: { (error, snapshot) in
+        DatabaseManager.ref.child("restaurant/0").getData(completion: { (error, snapshot) in
             if let error = error {
                 print("Error getting data \(error)")
             }
