@@ -42,6 +42,8 @@ class MapViewController: UIViewController, MTMapViewDelegate {
             self.view.addSubview(mapView)
             
             // test
+            print(DatabaseManager.sortbyFoodCategory(category: "한식").count)
+            print(DatabaseManager.sortbyDistance(latitude: 37.5738835, longitude: 126.9831643).count)
         }
     }
     
