@@ -11,20 +11,19 @@ import UIKit
 import MapKit
 import CoreLocation
 
+
 class MapViewController: UIViewController, MTMapViewDelegate {
     var mapView: MTMapView?
     var mapPoint: MTMapPoint?
     var poiItem1: MTMapPOIItem?
     var list = [MTMapPOIItem] ()
-    
     // test
     var DBop: DatabaseManager = DatabaseManager()
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-
         mapView = MTMapView(frame: self.view.bounds)
         mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude:37.573083, longitude: 126.983168))
         mapView?.setMapCenter(mapPoint, animated: true)
@@ -57,8 +56,9 @@ class MapViewController: UIViewController, MTMapViewDelegate {
             // test
             DBop.test()
         }
+
     }
-    
+
     func mapView(_ mapView: MTMapView!, updateCurrentLocation location: MTMapPoint!, withAccuracy accuracy: MTMapLocationAccuracy){
         let currentLocation = location?.mapPointGeo()
         if let latitude = currentLocation?.latitude, let longitude = currentLocation?.longitude{ print("MTMapView update Current Location (\(latitude), \(longitude))")}
@@ -80,4 +80,6 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         return item
         
     }
+ 
 }
+
