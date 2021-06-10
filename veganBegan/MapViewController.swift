@@ -40,6 +40,16 @@ class MapViewController: UIViewController, MTMapViewDelegate {
             mapView.add(poiItem1)
        
             self.view.addSubview(mapView)
+            
+            // test
+            print(DatabaseManager.sortbyDistance(latitude: 37.5738835, longitude: 126.9831643).count)
+            //print(DatabaseManager.sortbyFoodCategory(category: "한식").count)
+            DatabaseManager.updateRating(id: 0, rating: 2)
+            DatabaseManager.updateRating(id: 1, rating: 3)
+            DatabaseManager.updateRating(id: 2, rating: 4)
+            DatabaseManager.updateRating(id: 3, rating: 5)
+            print(DatabaseManager.sortbyRating().count)
+            print(DatabaseManager.sortbyRelevance(type: "락토"))
         }
     }
     
