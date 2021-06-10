@@ -81,6 +81,9 @@ class DatabaseManager {
         let queryResult = DatabaseManager.ref.child("restaurant").queryOrdered(byChild: "rating")
         queryResult.observeSingleEvent(of: .value, with: {snapshot in
             result = snapshot.value as! [[String: Any]]
+            result.sort(by: {(a, b) in
+                (a["rating"] as! Double) < (b["rating"] as! Double)
+            })
             if result.count > maxElement {result.removeFirst(result.count - maxElement)}
             result.reverse()
         })
