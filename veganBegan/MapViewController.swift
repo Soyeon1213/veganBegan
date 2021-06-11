@@ -51,6 +51,11 @@ class MapViewController: UIViewController, MTMapViewDelegate {
             self.view.insertSubview(mapView, at: 0)
             self.view.sendSubviewToBack(mapView)
         }
+        
+        //test
+        DatabaseManager.sortbyDistance(latitude: 37.5738835, longitude: 126.9831643, completion: {item in print(item.count)})
+        DatabaseManager.sortbyRating(completion: {item in print(item.count)})
+        //DatabaseManager.sortbyFoodCategory(category: "한식", completion: {item in print(item.count)})
 
     }
 

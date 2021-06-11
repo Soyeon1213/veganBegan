@@ -37,7 +37,7 @@ class DatabaseManager {
     static var vegetarian_type = [[String: Any]]()
     static let maxElement = 45
  
-    static func sortbyDistance(latitude: Double, longitude: Double) -> [[String: Any]] {
+    static func sortbyDistance(latitude: Double, longitude: Double, completion: @escaping([[String: Any]]) -> Void) {
         var result = [[String: Any]]()
         DatabaseManager.ref.child("restaurant").observeSingleEvent(of: .value, with: { snapshot in
             result = snapshot.value as! [[String: Any]]
@@ -49,11 +49,13 @@ class DatabaseManager {
                 return x1*x1 + x2*x2 < y1*y1 + y2*y2
             })
             if result.count > maxElement {result.removeLast(result.count - maxElement)}
+            DispatchQueue.main.async {
+                completion(result)
+            }
         })
-        return result
     }
     
-    static func sortbyFoodCategory(category: String) -> [[String: Any]] {
+    static func sortbyFoodCategory(category: String, completion: @escaping([[String: Any]]) -> Void) {
         var result = [[String: Any]]()
         if category == "기타" {
             // exclude "한식, 양식, 일식, 중식, 카페, 분식"
@@ -65,6 +67,9 @@ class DatabaseManager {
                     exclude.contains(item["food"] as! String)
                 })
                 if result.count > maxElement {result.removeLast(result.count - maxElement)}
+                DispatchQueue.main.async {
+                    completion(result)
+                }
             })
         }
         else {
@@ -72,12 +77,14 @@ class DatabaseManager {
             queryResult.observeSingleEvent(of: .value, with: {snapshot in
                 result = snapshot.value as! [[String: Any]]
                 if result.count > maxElement {result.removeLast(result.count - maxElement)}
+                DispatchQueue.main.async {
+                    completion(result)
+                }
             })
         }
-        return result
     }
     
-    static func sortbyRating() ->[[String: Any]] {
+    static func sortbyRating(completion: @escaping([[String: Any]]) -> Void) {
         var result = [[String: Any]]()
         let queryResult = DatabaseManager.ref.child("restaurant").queryOrdered(byChild: "rating")
         queryResult.observeSingleEvent(of: .value, with: {snapshot in
@@ -87,11 +94,13 @@ class DatabaseManager {
             })
             if result.count > maxElement {result.removeFirst(result.count - maxElement)}
             result.reverse()
+            DispatchQueue.main.async {
+                completion(result)
+            }
         })
-        return result
     }
     
-    static func sortbyRelevance(type: String) -> [[String: Any]] {
+    static func sortbyRelevance(type: String, completion: @escaping([[String: Any]]) -> Void) {
         var result = [[String: Any]]()
         struct initialize {
             static var value = true
@@ -118,9 +127,10 @@ class DatabaseManager {
                 return level_a < level_b
             })
             if result.count > maxElement {result.removeLast(result.count - maxElement)}
+            DispatchQueue.main.async {
+                completion(result)
+            }
         })
-        
-        return result
     }
     
     static func updateRating(id: Int, rating: Int) {
