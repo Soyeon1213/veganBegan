@@ -22,17 +22,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Vegan Began" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AfR-eF-u2V">
-                                <rect key="frame" x="77.333333333333343" y="50" width="259.66666666666663" height="45.666666666666657"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vegan Began" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AfR-eF-u2V">
+                                <rect key="frame" x="77" y="50" width="260" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4i2-fI-53U"/>
+                                    <constraint firstAttribute="width" constant="260" id="Hja-k8-IKY"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="36"/>
                                 <color key="textColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" systemColor="systemGreenColor"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZz-u0-6SE">
-                                <rect key="frame" x="74" y="423" width="266" height="94"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vegan표지" translatesAutoresizingMaskIntoConstraints="NO" id="qJP-Xy-hEz">
+                                <rect key="frame" x="107" y="140" width="200" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="Q6B-PW-HVk"/>
+                                    <constraint firstAttribute="height" constant="200" id="Ujt-zr-sgB"/>
+                                    <constraint firstAttribute="width" constant="200" id="ikf-m4-lca"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZz-u0-6SE">
+                                <rect key="frame" x="72" y="390" width="270" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="270" id="Q6B-PW-HVk"/>
                                     <constraint firstAttribute="height" constant="80" id="fVT-So-aOj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="BMDoHyeon-OTF" family="BM DoHyeon OTF" pointSize="23"/>
@@ -44,18 +55,11 @@
                                     <segue destination="ysp-Um-Ebj" kind="show" id="7JO-Qu-6nO"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="vegan표지" translatesAutoresizingMaskIntoConstraints="NO" id="qJP-Xy-hEz">
-                                <rect key="frame" x="107" y="155.66666666666663" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="Ujt-zr-sgB"/>
-                                    <constraint firstAttribute="width" constant="200" id="ikf-m4-lca"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e7f-OL-LLf">
-                                <rect key="frame" x="70" y="533" width="270" height="88"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e7f-OL-LLf">
+                                <rect key="frame" x="72" y="490" width="270" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="6nQ-kA-ggL"/>
-                                    <constraint firstAttribute="width" constant="200" id="8F4-Bd-xNf"/>
+                                    <constraint firstAttribute="width" constant="270" id="8F4-Bd-xNf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="BMDoHyeon-OTF" family="BM DoHyeon OTF" pointSize="23"/>
                                 <state key="normal" title="Information" backgroundImage="rectangle">
@@ -66,11 +70,11 @@
                                     <segue destination="NKg-Fz-uBr" kind="show" id="xF7-da-5WK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ocz-qL-etd">
-                                <rect key="frame" x="72" y="629" width="270" height="94"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ocz-qL-etd">
+                                <rect key="frame" x="72" y="590" width="270" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="8mP-iL-cnw"/>
-                                    <constraint firstAttribute="width" constant="200" id="wBe-xr-vQX"/>
+                                    <constraint firstAttribute="width" constant="270" id="wBe-xr-vQX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="BMDoHyeon-OTF" family="BM DoHyeon OTF" pointSize="23"/>
                                 <state key="normal" title="my setting" backgroundImage="rectangle">
@@ -85,13 +89,16 @@
                         <viewLayoutGuide key="safeArea" id="T5u-nI-wdZ"/>
                         <color key="backgroundColor" red="0.34620022773742676" green="0.73046368360519409" blue="0.66480487585067749" alpha="0.73729093309859151" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="AfR-eF-u2V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2jS-Xe-rJJ"/>
-                            <constraint firstItem="HZz-u0-6SE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Gg-Qf-U3d"/>
-                            <constraint firstItem="e7f-OL-LLf" firstAttribute="top" secondItem="HZz-u0-6SE" secondAttribute="bottom" constant="20" id="C8x-Gw-8Rw"/>
-                            <constraint firstItem="e7f-OL-LLf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dpk-L3-98g"/>
-                            <constraint firstItem="HZz-u0-6SE" firstAttribute="top" secondItem="qJP-Xy-hEz" secondAttribute="bottom" constant="80" id="EdI-c8-Kj5"/>
-                            <constraint firstItem="qJP-Xy-hEz" firstAttribute="top" secondItem="AfR-eF-u2V" secondAttribute="bottom" constant="60" id="QzH-Za-z8C"/>
-                            <constraint firstItem="qJP-Xy-hEz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X6h-v9-5av"/>
+                            <constraint firstItem="AfR-eF-u2V" firstAttribute="top" secondItem="T5u-nI-wdZ" secondAttribute="top" constant="50" id="466-WY-RQw"/>
+                            <constraint firstItem="HZz-u0-6SE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Vx-aM-hVV"/>
+                            <constraint firstItem="qJP-Xy-hEz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DD6-Ou-ycR"/>
+                            <constraint firstItem="e7f-OL-LLf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NOc-rz-IS4"/>
+                            <constraint firstItem="HZz-u0-6SE" firstAttribute="top" secondItem="qJP-Xy-hEz" secondAttribute="bottom" constant="50" id="XOc-Gw-Va3"/>
+                            <constraint firstItem="AfR-eF-u2V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i2C-wf-2u9"/>
+                            <constraint firstItem="Ocz-qL-etd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sWH-er-cnK"/>
+                            <constraint firstItem="qJP-Xy-hEz" firstAttribute="top" secondItem="AfR-eF-u2V" secondAttribute="bottom" constant="40" id="tJS-d6-9cC"/>
+                            <constraint firstItem="Ocz-qL-etd" firstAttribute="top" secondItem="e7f-OL-LLf" secondAttribute="bottom" constant="20" id="ubS-ue-p9k"/>
+                            <constraint firstItem="e7f-OL-LLf" firstAttribute="top" secondItem="HZz-u0-6SE" secondAttribute="bottom" constant="20" id="zLe-zn-l2a"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -520,32 +527,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="# n" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nj8-Dw-gKm">
-                                <rect key="frame" x="83" y="80" width="108" height="55"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="닉네임" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fj4-0q-ytT">
+                                <rect key="frame" x="82" y="140" width="250" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="108" id="NDR-rM-0zJ"/>
-                                    <constraint firstAttribute="height" constant="55" id="OLm-pz-pPr"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="BMDoHyeon-OTF" family="BM DoHyeon OTF" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="닉네임" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fj4-0q-ytT">
-                                <rect key="frame" x="83" y="165" width="248" height="55"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="248" id="SjW-Tw-UtL"/>
-                                    <constraint firstAttribute="height" constant="55" id="TiW-Re-PWd"/>
+                                    <constraint firstAttribute="width" constant="250" id="SjW-Tw-UtL"/>
+                                    <constraint firstAttribute="height" constant="60" id="TiW-Re-PWd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="BMDoHyeon-OTF" family="BM DoHyeon OTF" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -556,24 +542,6 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnh-B2-lkX">
-                                <rect key="frame" x="83" y="250" width="248" height="55"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="8nr-re-HAX"/>
-                                    <constraint firstAttribute="width" constant="248" id="KWZ-fV-5Hc"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="BMDoHyeon-OTF" family="BM DoHyeon OTF" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="10"/>
@@ -621,10 +589,8 @@
                         <viewLayoutGuide key="safeArea" id="7Jg-rq-fh7"/>
                         <color key="backgroundColor" red="0.92069977521896362" green="0.96654945611953735" blue="0.93960243463516235" alpha="0.9991455078" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ke2-8e-6zZ" firstAttribute="centerX" secondItem="9f9-it-IfR" secondAttribute="centerX" id="51N-xz-aiS"/>
-                            <constraint firstItem="fj4-0q-ytT" firstAttribute="top" secondItem="nj8-Dw-gKm" secondAttribute="bottom" constant="30" id="BiO-a2-ukZ"/>
-                            <constraint firstItem="nj8-Dw-gKm" firstAttribute="centerX" secondItem="9f9-it-IfR" secondAttribute="centerX" constant="-70" id="Xpv-eY-gmX"/>
-                            <constraint firstItem="fj4-0q-ytT" firstAttribute="centerX" secondItem="9f9-it-IfR" secondAttribute="centerX" id="fOn-dz-NLs"/>
+                            <constraint firstItem="fj4-0q-ytT" firstAttribute="centerX" secondItem="9f9-it-IfR" secondAttribute="centerX" id="YeV-Va-vHa"/>
+                            <constraint firstItem="fj4-0q-ytT" firstAttribute="top" secondItem="7Jg-rq-fh7" secondAttribute="top" constant="140" id="osP-xn-hPY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="CvD-i6-9rr"/>
