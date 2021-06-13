@@ -4,6 +4,7 @@ import UIKit
 class ViewController: UIViewController, MTMapViewDelegate {
  //   @IBOutlet var mapView: MTMapView?
     //@IBOutlet weak var cosmosView: CosmosView!
+    @IBOutlet weak var textField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
