@@ -81,6 +81,7 @@
 		9A33890726426A190025B252 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		9A33890826426CDD0025B252 /* veganBegan-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "veganBegan-Bridging-Header.h"; sourceTree = "<group>"; };
 		9A524B26266DEC12002EEA66 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		9ACCFC592675E08600654598 /* MapViewDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewDetail.swift; sourceTree = "<group>"; };
 		A7E002EA4B84443C7CBBF529 /* Pods-veganBegan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-veganBegan.release.xcconfig"; path = "Target Support Files/Pods-veganBegan/Pods-veganBegan.release.xcconfig"; sourceTree = "<group>"; };
 		D82D3B76266CA03100A17C36 /* Extension_UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension_UIView.swift; sourceTree = "<group>"; };
 		F6EDF22F2643119B001A924E /* map_pinup_custom@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_pinup_custom@3x.png"; sourceTree = "<group>"; };
@@ -140,7 +141,6 @@
 				9A338900264269E60025B252 /* SystemConfiguration.framework in Frameworks */,
 				F6EDF26F2643119B001A924E /* DaumMap.framework in Frameworks */,
 				9A3388FE264269DD0025B252 /* OpenGLES.framework in Frameworks */,
-				80EF086566DFC5E749FFED20 /* Pods_veganBegan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +186,7 @@
 				9A3388E1264266ED0025B252 /* SceneDelegate.swift */,
 				9A3388E3264266ED0025B252 /* ViewController.swift */,
 				F7A8F8862666B7930009D5DB /* MapViewController.swift */,
+				9ACCFC592675E08600654598 /* MapViewDetail.swift */,
 				9A3388E5264266ED0025B252 /* Main.storyboard */,
 				9A524B26266DEC12002EEA66 /* PickerViewController.swift */,
 				D82D3B76266CA03100A17C36 /* Extension_UIView.swift */,
@@ -210,7 +211,6 @@
 				9A338901264269ED0025B252 /* CoreLocation.framework */,
 				9A3388FF264269E60025B252 /* SystemConfiguration.framework */,
 				9A3388FD264269DD0025B252 /* OpenGLES.framework */,
-				658D62D287F575280F714A5F /* Pods_veganBegan.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -424,6 +424,7 @@
 				9A524B27266DEC12002EEA66 /* PickerViewController.swift in Sources */,
 				9A3388EA264266ED0025B252 /* veganBegan.xcdatamodeld in Sources */,
 				D82D3B77266CA03100A17C36 /* Extension_UIView.swift in Sources */,
+				9ACCFC5A2675E08600654598 /* MapViewDetail.swift in Sources */,
 				9A3388E0264266ED0025B252 /* AppDelegate.swift in Sources */,
 				F709397B2651108A007B179A /* DatabaseManager.swift in Sources */,
 				9A3388E2264266ED0025B252 /* SceneDelegate.swift in Sources */,

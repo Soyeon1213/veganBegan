@@ -31,7 +31,7 @@
                                 <color key="highlightedColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vegan표지" translatesAutoresizingMaskIntoConstraints="NO" id="qJP-Xy-hEz">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vegan표지" translatesAutoresizingMaskIntoConstraints="NO" id="qJP-Xy-hEz">
                                 <rect key="frame" x="87.5" y="140" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="Ujt-zr-sgB"/>
@@ -123,7 +123,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="페스코" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3j-OA-DkG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="페스코" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3j-OA-DkG">
                                 <rect key="frame" x="40" y="100" width="80" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="SRT-wk-xKb"/>
@@ -400,14 +400,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="온실가스" translatesAutoresizingMaskIntoConstraints="NO" id="Dr2-JM-5Ao">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="온실가스" translatesAutoresizingMaskIntoConstraints="NO" id="Dr2-JM-5Ao">
                                 <rect key="frame" x="112.5" y="120" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="TVp-Ir-cX2"/>
                                     <constraint firstAttribute="width" constant="150" id="qeK-1l-Jeu"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="동물복지" translatesAutoresizingMaskIntoConstraints="NO" id="SMq-AW-j7f">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="동물복지" translatesAutoresizingMaskIntoConstraints="NO" id="SMq-AW-j7f">
                                 <rect key="frame" x="112.5" y="360" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="WLL-KT-rAy"/>
@@ -975,10 +975,10 @@
             </objects>
             <point key="canvasLocation" x="4315.9420289855079" y="1606.7934782608697"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Detail-->
         <scene sceneID="qG8-Mq-fGC">
             <objects>
-                <viewController id="c2g-wm-I24" sceneMemberID="viewController">
+                <viewController id="c2g-wm-I24" customClass="MapViewDetail" customModule="veganBegan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hAC-wg-Q8K">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1328,7 +1328,7 @@
                                     <constraint firstAttribute="width" constant="240" id="q18-sh-zb3"/>
                                 </constraints>
                             </mapView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="거북이집_지도" translatesAutoresizingMaskIntoConstraints="NO" id="Ugr-2b-XMe">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="거북이집_지도" translatesAutoresizingMaskIntoConstraints="NO" id="Ugr-2b-XMe">
                                 <rect key="frame" x="20" y="100" width="335" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="Us8-Gl-Ahg"/>
@@ -1469,7 +1469,7 @@
                                     <segue destination="fEg-US-byB" kind="show" id="tym-Iv-9Lb"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="거북이집_사진" translatesAutoresizingMaskIntoConstraints="NO" id="e3x-Se-SKm">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="거북이집_사진" translatesAutoresizingMaskIntoConstraints="NO" id="e3x-Se-SKm">
                                 <rect key="frame" x="67.5" y="30" width="240" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="fIU-oo-iuu"/>
@@ -1619,7 +1619,7 @@
                                     <constraint firstAttribute="height" constant="300" id="SgC-AB-Xv3"/>
                                 </constraints>
                             </mapView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="구내식당_지도" translatesAutoresizingMaskIntoConstraints="NO" id="BPN-UX-N9s">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="구내식당_지도" translatesAutoresizingMaskIntoConstraints="NO" id="BPN-UX-N9s">
                                 <rect key="frame" x="20" y="100" width="335" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="sbP-lE-CjM"/>
@@ -1760,7 +1760,7 @@
                                     <segue destination="oYb-eq-ILa" kind="show" id="JBR-uH-JTf"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="구내식당_사진" translatesAutoresizingMaskIntoConstraints="NO" id="VyU-AP-0o7">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="구내식당_사진" translatesAutoresizingMaskIntoConstraints="NO" id="VyU-AP-0o7">
                                 <rect key="frame" x="67.5" y="30" width="240" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="Jjm-Y6-khU"/>
@@ -1888,12 +1888,12 @@
         <image name="GoldStarFilled" width="53" height="51"/>
         <image name="rectangle" width="243" height="141"/>
         <image name="star" catalog="system" width="64" height="58"/>
-        <image name="vegan표지" width="1000" height="900"/>
-        <image name="거북이집_사진" width="1318" height="970"/>
-        <image name="거북이집_지도" width="2268" height="1210"/>
-        <image name="구내식당_사진" width="1732" height="1120"/>
-        <image name="구내식당_지도" width="1752" height="984"/>
-        <image name="동물복지" width="1042" height="1048"/>
-        <image name="온실가스" width="280" height="201.33332824707031"/>
+        <image name="vegan표지" width="1000" height="900"/>
+        <image name="거북이집_사진" width="1318" height="970"/>
+        <image name="거북이집_지도" width="2268" height="1210"/>
+        <image name="구내식당_사진" width="1732" height="1120"/>
+        <image name="구내식당_지도" width="1752" height="984"/>
+        <image name="동물복지" width="1042" height="1048"/>
+        <image name="온실가스" width="280" height="201.33332824707031"/>
     </resources>
 </document>

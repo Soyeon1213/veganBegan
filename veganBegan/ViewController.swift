@@ -1,7 +1,4 @@
 import UIKit
-//import MapKit
-import CoreLocation
-//import Cosmos
 
 
 class ViewController: UIViewController, MTMapViewDelegate {
