@@ -48,7 +48,6 @@ class DatabaseManager {
                 let y2 = $1["Longitude"] as! Double - longitude
                 return x1*x1 + x2*x2 < y1*y1 + y2*y2
             })
-            if result.count > maxElement {result.removeLast(result.count - maxElement)}
             DispatchQueue.main.async {
                 completion(result)
             }
@@ -66,17 +65,15 @@ class DatabaseManager {
                 result.removeAll(where: {item in
                     exclude.contains(item["food"] as! String)
                 })
-                if result.count > maxElement {result.removeLast(result.count - maxElement)}
                 DispatchQueue.main.async {
                     completion(result)
                 }
             })
         }
         else {
-            let queryResult = DatabaseManager.ref.child("restaurant").queryEqual(toValue: category, childKey: "food")
+            let queryResult = DatabaseManager.ref.child("restaurant").queryOrdered(byChild: "food").queryEqual(toValue: category)
             queryResult.observeSingleEvent(of: .value, with: {snapshot in
                 result = snapshot.value as! [[String: Any]]
-                if result.count > maxElement {result.removeLast(result.count - maxElement)}
                 DispatchQueue.main.async {
                     completion(result)
                 }
@@ -92,7 +89,6 @@ class DatabaseManager {
             result.sort(by: {(a, b) in
                 (a["rating"] as! Double) < (b["rating"] as! Double)
             })
-            if result.count > maxElement {result.removeFirst(result.count - maxElement)}
             result.reverse()
             DispatchQueue.main.async {
                 completion(result)
@@ -126,7 +122,6 @@ class DatabaseManager {
                 let level_b = DatabaseManager.vegetarian_type[b["type_max"] as! Int]["level"] as! Int
                 return level_a < level_b
             })
-            if result.count > maxElement {result.removeLast(result.count - maxElement)}
             DispatchQueue.main.async {
                 completion(result)
             }
