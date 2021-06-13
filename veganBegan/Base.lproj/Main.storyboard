@@ -557,12 +557,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Pf-jO-HbC">
-                                <rect key="frame" x="47" y="500" width="320" height="216"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ke2-8e-6zZ">
-                                <rect key="frame" x="132.5" y="380" width="110" height="55"/>
+                                <rect key="frame" x="132.5" y="542" width="110" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="A3O-Po-26r"/>
                                     <constraint firstAttribute="width" constant="110" id="uCS-cg-UDz"/>
@@ -604,9 +600,9 @@
                             <constraint firstItem="ke2-8e-6zZ" firstAttribute="centerX" secondItem="9f9-it-IfR" secondAttribute="centerX" id="B0s-k8-GeA"/>
                             <constraint firstItem="tzl-83-D5C" firstAttribute="top" secondItem="fj4-0q-ytT" secondAttribute="bottom" constant="60" id="CSn-le-SNk"/>
                             <constraint firstItem="tzl-83-D5C" firstAttribute="centerX" secondItem="9f9-it-IfR" secondAttribute="centerX" constant="-70" id="NHP-Xp-mqu"/>
+                            <constraint firstItem="7Jg-rq-fh7" firstAttribute="bottom" secondItem="ke2-8e-6zZ" secondAttribute="bottom" constant="50" id="YaA-0i-9IN"/>
                             <constraint firstItem="fj4-0q-ytT" firstAttribute="centerX" secondItem="9f9-it-IfR" secondAttribute="centerX" id="YeV-Va-vHa"/>
                             <constraint firstItem="Vjx-R8-tW4" firstAttribute="top" secondItem="fj4-0q-ytT" secondAttribute="bottom" constant="60" id="adg-XW-fJL"/>
-                            <constraint firstItem="ke2-8e-6zZ" firstAttribute="top" secondItem="Vjx-R8-tW4" secondAttribute="bottom" constant="80" id="g1L-vK-RGg"/>
                             <constraint firstItem="fj4-0q-ytT" firstAttribute="top" secondItem="7Jg-rq-fh7" secondAttribute="top" constant="140" id="osP-xn-hPY"/>
                             <constraint firstItem="Vjx-R8-tW4" firstAttribute="centerX" secondItem="9f9-it-IfR" secondAttribute="centerX" constant="70" id="pR2-GQ-4xa"/>
                         </constraints>
